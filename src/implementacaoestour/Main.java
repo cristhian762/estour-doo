@@ -5,7 +5,7 @@
  */
 package implementacaoestour;
 
-import modelo.Ipessoa;
+import modelo.*;
 
 /**
  *
@@ -17,7 +17,16 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Ipessoa novaPessoa = new FabricaPessoa.criaPessoa("t");
+        Administrador administrador = new Administrador();
+        Atracao atracao = new Atracao();
+        Avaliacao avaliacao = new Avaliacao();
+        Categoria categoria = new Categoria();
+        Comentario comentario = new Comentario();
+        Comercio comercio = new Comercio();
+        Endereco endereco = new Endereco();
+        Pessoa pessoa = new Pessoa();
+        PontoTuristico pontoturistico = new PontoTuristico();
+        Turista turista = new Turista();
     }
     
 }
