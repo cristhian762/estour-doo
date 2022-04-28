@@ -16,7 +16,9 @@ public class Turista extends Pessoa{
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    public Turista setCpf(String cpf) {
         this.cpf = cpf;
+        
+        return this;
     }
 }

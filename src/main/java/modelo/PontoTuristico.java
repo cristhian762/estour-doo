@@ -13,8 +13,10 @@ public class PontoTuristico {
     private String nome;
     private String descricao;
 
-    public void setNome(String nome) {
+    public PontoTuristico setNome(String nome) {
         this.nome = nome;
+
+        return this;
     }
 
     public String getNome() {
@@ -25,7 +27,9 @@ public class PontoTuristico {
         return descricao;
     }
 
-    public void setDescricao(String descricao) {
+    public PontoTuristico setDescricao(String descricao) {
         this.descricao = descricao;
+
+        return this;
     }
 }

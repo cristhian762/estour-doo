@@ -19,31 +19,39 @@ public class Pessoa {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public Pessoa setNome(String nome) {
         this.nome = nome;
+        
+        return this;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public Pessoa setEmail(String email) {
         this.email = email;
+        
+        return this;
     }
 
     public String getSenha() {
         return senha;
     }
 
-    public void setSenha(String senha) {
+    public Pessoa setSenha(String senha) {
         this.senha = senha;
+        
+        return this;
     }
 
     public String getImg() {
         return img;
     }
 
-    public void setImg(String img) {
+    public Pessoa setImg(String img) {
         this.img = img;
+        
+        return this;
     }
 }

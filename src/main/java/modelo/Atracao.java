@@ -19,32 +19,40 @@ public class Atracao {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public Atracao setNome(String nome) {
         this.nome = nome;
+
+        return this;
     }
 
     public String getDescricao() {
         return descricao;
     }
 
-    public void setDescricao(String descricao) {
+    public Atracao setDescricao(String descricao) {
         this.descricao = descricao;
+
+        return this;
     }
 
     public String getDataFim() {
         return dataFim;
     }
 
-    public void setDataFim(String dataFim) {
+    public Atracao setDataFim(String dataFim) {
         this.dataFim = dataFim;
+
+        return this;
     }
 
     public String getDataInicio() {
         return dataInicio;
     }
 
-    public void setDataInicio(String dataInicio) {
+    public Atracao setDataInicio(String dataInicio) {
         this.dataInicio = dataInicio;
+
+        return this;
     }
     
     

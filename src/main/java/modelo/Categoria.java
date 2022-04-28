@@ -12,8 +12,10 @@ package modelo;
 public class Categoria {
     private String nome;
 
-    public void setNome(String nome) {
+    public Categoria setNome(String nome) {
         this.nome = nome;
+
+        return this;
     }
 
     public String getNome() {

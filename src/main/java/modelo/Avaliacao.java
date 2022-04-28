@@ -12,8 +12,10 @@ package modelo;
 public class Avaliacao {
     private float nota;
 
-    public void setNota(float nota) {
+    public Avaliacao setNota(float nota) {
         this.nota = nota;
+
+        return this;
     }
 
     public float getNota() {

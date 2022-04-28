@@ -16,7 +16,8 @@ public class Comentario {
         return descricao;
     }
 
-    public void setDescricao(String descricao) {
+    public Comentario setDescricao(String descricao) {
         this.descricao = descricao;
+        return this;
     }
 }

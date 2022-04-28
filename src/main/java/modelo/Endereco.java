@@ -20,39 +20,49 @@ public class Endereco {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public Endereco setNumero(int numero) {
         this.numero = numero;
+
+        return this;
     }
 
     public String getLogradouro() {
         return logradouro;
     }
 
-    public void setLogradouro(String logradouro) {
+    public Endereco setLogradouro(String logradouro) {
         this.logradouro = logradouro;
+
+        return this;
     }
 
     public String getBairro() {
         return bairro;
     }
 
-    public void setBairro(String bairro) {
+    public Endereco setBairro(String bairro) {
         this.bairro = bairro;
+
+        return this;
     }
 
     public String getCidade() {
         return cidade;
     }
 
-    public void setCidade(String cidade) {
+    public Endereco setCidade(String cidade) {
         this.cidade = cidade;
+
+        return this;
     }
 
     public float getCep() {
         return cep;
     }
 
-    public void setCep(float cep) {
+    public Endereco setCep(float cep) {
         this.cep = cep;
+
+        return this;
     }
 }

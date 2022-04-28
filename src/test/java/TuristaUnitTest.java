@@ -51,15 +51,17 @@ public class TuristaUnitTest {
 	//
 	@Test
 	public void testeDaMain() {
-		Turista turista = new Turista();
-		
-		turista.setNome("Arman Moreno Trindade");
-		turista.setEmail("ArmanMoreno@gmail.com");
-		turista.setSenha("qwerty@123");
-		turista.setImg("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Breezeicons-actions-22-im-user.svg/1200px-Breezeicons-actions-22-im-user.svg.png");
-		
-		turista.setCpf("562.158.945-11");
-		
-		System.out.println(turista.getEmail() + "  " + turista.getCpf());
+            Turista turista = new Turista();
+
+            turista.setNome("Arman Moreno Trindade")
+                .setEmail("ArmanMoreno@gmail.com")
+                .setSenha("qwerty@123")
+                .setImg("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Breezeicons-actions-22-im-user.svg/1200px-Breezeicons-actions-22-im-user.svg.png");
+      
+            turista.setCpf("562.158.945-11");
+
+            System.out.println(turista.getEmail() + "  " + turista.getCpf());
+            
+            assertEquals("qwerty@123", turista.getSenha());
 	}
 }

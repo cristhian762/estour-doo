@@ -13,16 +13,20 @@ public class Comercio {
    private String nome;
    private String descripcao;
 
-    public void setNome(String nome) {
+    public Comercio setNome(String nome) {
         this.nome = nome;
+
+        return this;
     }
 
     public String getNome() {
         return nome;
     }
    
-    public void setDescripcao(String descripcao) {
+    public Comercio setDescripcao(String descripcao) {
         this.descripcao = descripcao;
+
+        return this;
     }
 
     public String getDescripcao() {
