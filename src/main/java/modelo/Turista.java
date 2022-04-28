@@ -10,13 +10,13 @@ package modelo;
  * @author 20181BSI0229
  */
 public class Turista extends Pessoa{
-    private float cpf;
+    private String cpf;
 
-    public float getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(float cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 }
