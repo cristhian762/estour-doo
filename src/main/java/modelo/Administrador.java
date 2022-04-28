@@ -9,6 +9,6 @@ package modelo;
  *
  * @author 20181BSI0229
  */
-public class Administrador extends Pessoa{
+public class Administrador extends Pessoa implements Ipessoa{
     
 }

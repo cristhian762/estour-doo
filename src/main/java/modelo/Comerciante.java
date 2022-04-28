@@ -9,7 +9,7 @@ package modelo;
  *
  * @author 20181BSI0229
  */
-public class Comerciante extends Pessoa{
+public class Comerciante extends Pessoa implements Ipessoa{
     private float cnpj;
 
     public float getCnpj() {
