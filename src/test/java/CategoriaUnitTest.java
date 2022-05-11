@@ -27,34 +27,34 @@ import static org.junit.Assert.*;
  */
 public class CategoriaUnitTest {
 
-	public CategoriaUnitTest() {
-	}
+    public CategoriaUnitTest() {
+    }
 
-	@BeforeClass
-	public static void setUpClass() {
-	}
+    @BeforeClass
+    public static void setUpClass() {
+    }
 
-	@AfterClass
-	public static void tearDownClass() {
-	}
+    @AfterClass
+    public static void tearDownClass() {
+    }
 
-	@Before
-	public void setUp() {
-	}
+    @Before
+    public void setUp() {
+    }
 
-	@After
-	public void tearDown() {
-	}
+    @After
+    public void tearDown() {
+    }
 
-	// TODO add test methods here.
-	// The methods must be annotated with annotation @Test. For example:
-	//
-	@Test
-	public void testeDaMain() {
-		Categoria categoria = new Categoria();
-		    
-		categoria.setNome("Agroturismo");
-		
-		System.out.println(categoria.getNome());
-	}
+    // TODO add test methods here.
+    // The methods must be annotated with annotation @Test. For example:
+    //
+    @Test
+    public void testeDaMain() {
+        Categoria categoria = new Categoria();
+
+        categoria.setNome("Agroturismo");
+
+        System.out.println(categoria.getNome());
+    }
 }

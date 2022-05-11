@@ -27,41 +27,41 @@ import static org.junit.Assert.*;
  */
 public class TuristaUnitTest {
 
-	public TuristaUnitTest() {
-	}
+    public TuristaUnitTest() {
+    }
 
-	@BeforeClass
-	public static void setUpClass() {
-	}
+    @BeforeClass
+    public static void setUpClass() {
+    }
 
-	@AfterClass
-	public static void tearDownClass() {
-	}
+    @AfterClass
+    public static void tearDownClass() {
+    }
 
-	@Before
-	public void setUp() {
-	}
+    @Before
+    public void setUp() {
+    }
 
-	@After
-	public void tearDown() {
-	}
+    @After
+    public void tearDown() {
+    }
 
-	// TODO add test methods here.
-	// The methods must be annotated with annotation @Test. For example:
-	//
-	@Test
-	public void testeDaMain() {
-            Turista turista = new Turista();
+    // TODO add test methods here.
+    // The methods must be annotated with annotation @Test. For example:
+    //
+    @Test
+    public void testeDaMain() {
+        Turista turista = new Turista();
 
-            turista.setNome("Arman Moreno Trindade")
+        turista.setNome("Arman Moreno Trindade")
                 .setEmail("ArmanMoreno@gmail.com")
                 .setSenha("qwerty@123")
                 .setImg("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Breezeicons-actions-22-im-user.svg/1200px-Breezeicons-actions-22-im-user.svg.png");
-      
-            turista.setCpf("562.158.945-11");
 
-            System.out.println(turista.getEmail() + "  " + turista.getCpf());
-            
-            assertEquals("qwerty@123", turista.getSenha());
-	}
+        turista.setCpf("562.158.945-11");
+
+        System.out.println(turista.getEmail() + "  " + turista.getCpf());
+
+        assertEquals("qwerty@123", turista.getSenha());
+    }
 }

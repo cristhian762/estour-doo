@@ -16,7 +16,9 @@ public class Comerciante extends Pessoa{
         return cnpj;
     }
 
-    public void setCnpj(float cnpj) {
+    public Comerciante setCnpj(float cnpj) {
         this.cnpj = cnpj;
+        
+        return this;
     }
 }
