@@ -9,16 +9,7 @@ package modelo;
  *
  * @author 20181BSI0229
  */
-public class Turista extends Pessoa implements Ipessoa{
-    private String cpf;
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public Turista setCpf(String cpf) {
-        this.cpf = cpf;
-        
-        return this;
+public interface Ipessoa {
+    public static void GeraPessoa(char tipo){
     }
 }
