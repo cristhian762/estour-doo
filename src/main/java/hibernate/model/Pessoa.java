@@ -20,7 +20,7 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 @Table(name = "pessoa")
    
-public class Pessoa {
+abstract class  Pessoa {
     @Id
     @GeneratedValue(generator = "increment")    
     @GenericGenerator(name = "increment", strategy = "increment")
