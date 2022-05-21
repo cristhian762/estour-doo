@@ -10,7 +10,7 @@ public class AdministradorDAOImpl  extends GenericDAOImpl<Administrador> impleme
         public List<Administrador> buscaAdministradorId(int id){            
             sessao = HibernateUtil.getSession();
             transacao = sessao.beginTransaction();                        
-            List<Administrador> lista = sessao.createQuery("from Pessoa where id = " + id).list();
+            List<Administrador> lista = sessao.createQuery("from Administrador where id = " + id).list();
             transacao.commit();            
             sessao.close();
             return lista;

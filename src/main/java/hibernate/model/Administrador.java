@@ -14,7 +14,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 /**
  *
- * @author 20181BSI0229
+ * @author 20191BSI0077
  */
 
 @Entity

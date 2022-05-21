@@ -4,21 +4,15 @@
  * and open the template in the editor.
  */
 
-import modelo.Administrador;
-import modelo.Atracao;
-import modelo.Avaliacao;
-import modelo.Categoria;
-import modelo.Comentario;
-import modelo.Comercio;
-import modelo.Endereco;
-import modelo.Pessoa;
-import modelo.PontoTuristico;
-import modelo.Turista;
+import hibernate.model.*;
+import hibernate.persistencia.*;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+
 import static org.junit.Assert.*;
 
 /**
@@ -50,14 +44,17 @@ public class AdministradorUnitTest {
 	// The methods must be annotated with annotation @Test. For example:
 	//
 	@Test
-	public void testeDaMain() {
-		Administrador administrador = new Administrador();
+	public void testeDaMain() throws Exception {
+		AdministradorDAO adminDao = new AdministradorDAOImpl();
+		Administrador admin = new Administrador();
 		
-		administrador.setNome("Administrador");
-		administrador.setEmail("administrador@estour.com.br");
-		administrador.setSenha("pass@123");
-		administrador.setImg("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Breezeicons-actions-22-im-user.svg/1200px-Breezeicons-actions-22-im-user.svg.png");
+		admin.setNome("Administrador");
+		admin.setEmail("administrador@estour.com.br");
+		admin.setSenha("pass@123");
+		admin.setImg("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Breezeicons-actions-22-im-user.svg/1200px-Breezeicons-actions-22-im-user.svg.png");
 		
-		System.out.println(administrador.getEmail());
+		adminDao.inserir(admin);
+
+		System.out.println(admin);
 	}
 }
