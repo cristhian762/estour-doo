@@ -4,19 +4,24 @@
  * and open the template in the editor.
  */
 package modelo;
-
+import java.util.List;
 /**
  *
  * @author 20181BSI0229
  */
-public class Comerciante extends Pessoa implements Ipessoa{
-    private float cnpj;
+public class Comerciante extends Pessoa{
 
-    public float getCnpj() {
+    public Comerciante(List<String> com) {
+        super(com.get(1), com.get(2), com.get(3), com.get(4));
+        this.cnpj = com.get(5);
+    }
+    private String cnpj;
+
+    public String getCnpj() {
         return cnpj;
     }
 
-    public Comerciante setCnpj(float cnpj) {
+    public Comerciante setCnpj(String cnpj) {
         this.cnpj = cnpj;
         
         return this;

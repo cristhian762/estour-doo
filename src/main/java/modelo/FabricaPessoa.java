@@ -4,21 +4,22 @@
  * and open the template in the editor.
  */
 package modelo;
+import java.util.List;
 
 /**
  *
  * @author 20181BSI0229
  */
 public class FabricaPessoa {
-    public static Ipessoa gerarPessoa(char tipo){
+    public static Pessoa gerarPessoa(List<String> usuario){
         
-        switch (tipo) {
-            case 'a':
-                return new Administrador();
-            case 't':
-                return new  Turista();
-            case 'c':
-                return new Comerciante();
+        switch (usuario.get(0)) {
+            case "a":
+                return new Administrador(usuario);
+            case "t":
+                return new  Turista(usuario);
+            case "c":
+                return new Comerciante(usuario);
             default:
                 break;
         }

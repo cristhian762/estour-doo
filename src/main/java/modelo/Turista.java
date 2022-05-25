@@ -5,11 +5,20 @@
  */
 package modelo;
 
+import java.util.List;
+
 /**
  *
  * @author 20181BSI0229
  */
-public class Turista extends Pessoa implements Ipessoa{
+public class Turista extends Pessoa {
+
+    public Turista(List<String> turista) {
+        super(turista.get(1), turista.get(2), turista.get(3), turista.get(4));
+        // this.nome = turista.get(5);
+        this.cpf = turista.get(5);
+    }
+
     private String cpf;
 
     public String getCpf() {
@@ -18,7 +27,7 @@ public class Turista extends Pessoa implements Ipessoa{
 
     public Turista setCpf(String cpf) {
         this.cpf = cpf;
-        
+
         return this;
     }
 }

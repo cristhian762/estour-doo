@@ -9,12 +9,19 @@ package modelo;
  *
  * @author 20181BSI0229
  */
-public class Pessoa {
+public class Pessoa implements Ipessoa{
     private String nome;
     private String email;
     private String senha;
     private String img;
 
+    public Pessoa(String nome, String email, String senha, String img) {
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+        this.img = img;
+    }
+    
     public String getNome() {
         return nome;
     }
