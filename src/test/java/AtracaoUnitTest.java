@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 
+
+import hibernate.persistencia.AtracaoDAO;
+import hibernate.persistencia.AtracaoDAOImpl;
 import modelo.Administrador;
 import modelo.Atracao;
 import modelo.Avaliacao;
@@ -23,7 +26,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author 20191BSI0077
+ * @author 20181bsi0148
  */
 public class AtracaoUnitTest {
 
@@ -50,14 +53,17 @@ public class AtracaoUnitTest {
 	// The methods must be annotated with annotation @Test. For example:
 	//
 	@Test
-	public void testeDaMain() {
-		Atracao atracao = new Atracao();
-		    
-		atracao.setNome("Festa da Polenta");
-		atracao.setDescricao("A Festa da Polenta é uma festa realizada na cidade de Venda Nova do Imigrante, no bairro Santa Cruz, sempre na primeira e segunda semana de Outubro. Todo ano, a preparação para a festa começa em Março, com o Plantio do Milho, em Bananeiras, na propriedade do Sr Ambrósio Falchetto.");
-		atracao.setDataInicio("06/10/22");
-		atracao.setDataFim("15/10/22");
+	public void testeDaMain() throws Exception {
+		AtracaoDAO atracaoDao = new AtracaoDAOImpl();
+		hibernate.model.Atracao atracao = new hibernate.model.Atracao();
 		
-		System.out.println(atracao.getDescricao());
+		atracao.setNome("Festa da Polenta");
+		atracao.setDescricao("Eh uma festa bem legal e que tem bastante polenta hm delicia");
+		atracao.setDataInicio("13/10/2022");
+		atracao.setDataFim("20/10/2022");
+		
+		atracaoDao.inserir(atracao);
+
+		System.out.println(atracao);
 	}
 }
