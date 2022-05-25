@@ -21,10 +21,6 @@ public class Turista extends Pessoa {
 
     private String cpf;
 
-    public Turista() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public String getCpf() {
         return cpf;
     }
