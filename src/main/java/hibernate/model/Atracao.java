@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import modelo.*;
 import org.hibernate.annotations.GenericGenerator;
 
 /**
@@ -72,6 +71,4 @@ public class Atracao {
 
         return this;
     }
-    
-    
 }
