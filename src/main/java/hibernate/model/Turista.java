@@ -29,13 +29,6 @@ public class Turista extends Pessoa implements Ipessoa{
     
     private String cpf;
 
-    
-    public Turista(List<String> turista) {
-        super(turista.get(1), turista.get(2), turista.get(3), turista.get(4));
-        // this.nome = turista.get(5);
-        this.cpf = turista.get(5);
-    }
-
     public String getCpf() {
         return cpf;
     }
