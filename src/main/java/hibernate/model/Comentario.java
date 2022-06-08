@@ -11,68 +11,28 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import modelo.*;
 import org.hibernate.annotations.GenericGenerator;
-
 /**
  *
- * @author 20181BSI0148
+ * @author 20181BSI0229
  */
 
 @Entity
 @Table(name = "atracao")
-   
 
-public class Atracao {
+public class Comentario {
     
     @Id
     @GeneratedValue(generator = "increment")    
     @GenericGenerator(name = "increment", strategy = "increment")
-    
-    private int id;
-     
-    private String nome;
+        
     private String descricao;
-    private String dataFim;
-    private String dataInicio;
-
-    public String getNome() {
-        return nome;
-    }
-
-    public Atracao setNome(String nome) {
-        this.nome = nome;
-
-        return this;
-    }
 
     public String getDescricao() {
         return descricao;
     }
 
-    public Atracao setDescricao(String descricao) {
+    public Comentario setDescricao(String descricao) {
         this.descricao = descricao;
-
         return this;
     }
-
-    public String getDataFim() {
-        return dataFim;
-    }
-
-    public Atracao setDataFim(String dataFim) {
-        this.dataFim = dataFim;
-
-        return this;
-    }
-
-    public String getDataInicio() {
-        return dataInicio;
-    }
-
-    public Atracao setDataInicio(String dataInicio) {
-        this.dataInicio = dataInicio;
-
-        return this;
-    }
-    
-    
 }
