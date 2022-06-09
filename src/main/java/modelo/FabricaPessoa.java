@@ -11,15 +11,15 @@ import java.util.List;
  * @author 20181BSI0229
  */
 public class FabricaPessoa {
-    public static Pessoa gerarPessoa(List<String> usuario){
+    public static Pessoa gerarPessoa(String tipo, String nome, String email, String senha, String img){
         
-        switch (usuario.get(0)) {
+        switch (tipo) {
             case "a":
-                return new Administrador(usuario);
+                return new Administrador(nome, email, senha, img);
             case "t":
-                return new  Turista(usuario);
+                return new  Turista(nome, email, senha, img);
             case "c":
-                return new Comerciante(usuario);
+                return new Comerciante(nome, email, senha, img);
             default:
                 break;
         }

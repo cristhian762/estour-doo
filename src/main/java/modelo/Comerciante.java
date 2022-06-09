@@ -4,18 +4,17 @@
  * and open the template in the editor.
  */
 package modelo;
-import java.util.List;
 /**
  *
  * @author 20181BSI0229
  */
 public class Comerciante extends Pessoa{
 
-    public Comerciante(List<String> com) {
-        super(com.get(1), com.get(2), com.get(3), com.get(4));
-        this.cnpj = com.get(5);
-    }
     private String cnpj;
+    
+    public Comerciante(String nome, String email, String senha, String img) {
+        super(nome, email, senha, img);
+    }
 
     public String getCnpj() {
         return cnpj;

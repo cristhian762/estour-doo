@@ -4,17 +4,14 @@
  * and open the template in the editor.
  */
 package modelo;
-
-import java.util.List;
-
 /**
  *
  * @author 20181BSI0229
  */
 public class Administrador extends Pessoa {
 
-    public Administrador(List<String> adm) {
-        super(adm.get(1), adm.get(2), adm.get(3), adm.get(4));
+    public Administrador(String nome, String email, String senha, String img) {
+        super(nome, email, senha, img);
     }
     
 }
