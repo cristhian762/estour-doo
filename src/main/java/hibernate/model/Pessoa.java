@@ -5,7 +5,6 @@
  */
 package hibernate.model;
 
-
 /**
  *
  * @author 20181BSI0229
