@@ -14,6 +14,7 @@
                 <mapping class="hibernate.model.Administrador"/>
                 <mapping class="hibernate.model.Turista"/>
                 <mapping class="hibernate.model.Atracao"/>
-                <mapping class="hibernate.model.Categoria"/>                                   
+                <mapping class="hibernate.model.Categoria"/>    
+                <mapping class="hibernate.model.Comentario"/>                                  
 	</session-factory>
 </hibernate-configuration>
