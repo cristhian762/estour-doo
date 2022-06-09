@@ -46,10 +46,10 @@ public class AtracaoUnitTest {
 		AtracaoDAO atracaoDao = new AtracaoDAOImpl();
 		hibernate.model.Atracao atracao = new hibernate.model.Atracao();
 		
-		atracao.setNome("Festa da Polenta")
-		.setDescricao("Eh uma festa bem legal e que tem bastante polenta hm delicia")
-		.setDataInicio("13/10/2022")
-		.setDataFim("20/10/2022");
+		atracao.comNome("Festa da Polenta")
+		.comDescricao("Eh uma festa bem legal e que tem bastante polenta hm delicia")
+		.comDataInicio("13/10/2022")
+		.comDataFim("20/10/2022");
 		
 		atracaoDao.inserir(atracao);
 

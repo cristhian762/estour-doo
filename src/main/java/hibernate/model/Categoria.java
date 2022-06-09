@@ -31,7 +31,7 @@ public class Categoria {
         return this;
     }
 
-    public String getNome() {
+    public String comNome() {
         return nome;
     }
 }

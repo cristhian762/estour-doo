@@ -22,7 +22,7 @@ abstract class  Pessoa {
         return nome;
     }
 
-    public Pessoa setNome(String nome) {
+    public Pessoa comNome(String nome) {
         this.nome = nome;
         
         return this;
@@ -32,7 +32,7 @@ abstract class  Pessoa {
         return email;
     }
 
-    public Pessoa setEmail(String email) {
+    public Pessoa comEmail(String email) {
         this.email = email;
         
         return this;
@@ -42,7 +42,7 @@ abstract class  Pessoa {
         return senha;
     }
 
-    public Pessoa setSenha(String senha) {
+    public Pessoa comSenha(String senha) {
         this.senha = senha;
         
         return this;
@@ -52,7 +52,7 @@ abstract class  Pessoa {
         return img;
     }
 
-    public Pessoa setImg(String img) {
+    public Pessoa comImg(String img) {
         this.img = img;
         
         return this;

@@ -36,7 +36,7 @@ public class Atracao {
         return nome;
     }
 
-    public Atracao setNome(String nome) {
+    public Atracao comNome(String nome) {
         this.nome = nome;
 
         return this;
@@ -46,7 +46,7 @@ public class Atracao {
         return descricao;
     }
 
-    public Atracao setDescricao(String descricao) {
+    public Atracao comDescricao(String descricao) {
         this.descricao = descricao;
 
         return this;
@@ -56,7 +56,7 @@ public class Atracao {
         return dataFim;
     }
 
-    public Atracao setDataFim(String dataFim) {
+    public Atracao comDataFim(String dataFim) {
         this.dataFim = dataFim;
 
         return this;
@@ -66,7 +66,7 @@ public class Atracao {
         return dataInicio;
     }
 
-    public Atracao setDataInicio(String dataInicio) {
+    public Atracao comDataInicio(String dataInicio) {
         this.dataInicio = dataInicio;
 
         return this;

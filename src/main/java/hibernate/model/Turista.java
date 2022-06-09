@@ -9,9 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import modelo.*;
 import org.hibernate.annotations.GenericGenerator;
-import java.util.List;
 
 /**
  *
@@ -33,7 +31,7 @@ public class Turista extends Pessoa implements Ipessoa{
         return cpf;
     }
 
-    public Turista setCpf(String cpf) {
+    public Turista comCpf(String cpf) {
         this.cpf = cpf;
 
         return this;

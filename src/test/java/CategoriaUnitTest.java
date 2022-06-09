@@ -4,22 +4,12 @@
  * and open the template in the editor.
  */
 
-import modelo.Administrador;
-import modelo.Atracao;
-import modelo.Avaliacao;
 import modelo.Categoria;
-import modelo.Comentario;
-import modelo.Comercio;
-import modelo.Endereco;
-import modelo.Pessoa;
-import modelo.PontoTuristico;
-import modelo.Turista;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
