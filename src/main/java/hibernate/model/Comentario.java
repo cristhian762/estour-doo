@@ -19,7 +19,7 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 @Table(name = "comentario")
 
-public class Comentario {
+public class Comentario extends Observable {
 
 	@Id
 	@GeneratedValue(generator = "increment")
@@ -35,6 +35,9 @@ public class Comentario {
 
 	public Comentario setDescricao(String descricao) {
 		this.descricao = descricao;
+
+		notifyObserver();
+		
 		return this;
 	}
 }

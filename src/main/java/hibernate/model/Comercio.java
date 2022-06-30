@@ -13,37 +13,38 @@ import org.hibernate.annotations.GenericGenerator;
 
 /**
  *
- * @author 20181BSI0229
+ * @author 20181BSI0077
  */
+
 @Entity
-@Table(name = "comercio")
+@Table(name = "avaliacao")
+   
+
 public class Comercio {
+   @Id
+   @GeneratedValue(generator = "increment")    
+   @GenericGenerator(name = "increment", strategy = "increment")
 
-	@Id
-	@GeneratedValue(generator = "increment")
-	@GenericGenerator(name = "increment", strategy = "increment")
+   private String nome;
+   private String descripcao;
 
-	private int id;
-	private String nome;
-	private String descripcao;
+    public Comercio setNome(String nome) {
+        this.nome = nome;
 
-	public Comercio setNome(String nome) {
-		this.nome = nome;
+        return this;
+    }
 
-		return this;
-	}
+    public String getNome() {
+        return nome;
+    }
+   
+    public Comercio setDescripcao(String descripcao) {
+        this.descripcao = descripcao;
 
-	public String getNome() {
-		return nome;
-	}
+        return this;
+    }
 
-	public Comercio setDescripcao(String descripcao) {
-		this.descripcao = descripcao;
-
-		return this;
-	}
-
-	public String getDescripcao() {
-		return descripcao;
-	}
+    public String getDescripcao() {
+        return descripcao;
+    }
 }
