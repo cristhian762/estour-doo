@@ -10,28 +10,31 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
+
 /**
  *
  * @author 20181BSI0229
  */
 
 @Entity
-@Table(name = "atracao")
+@Table(name = "comentario")
 
 public class Comentario {
-    
-    @Id
-    @GeneratedValue(generator = "increment")    
-    @GenericGenerator(name = "increment", strategy = "increment")
-        
-    private String descricao;
 
-    public String getDescricao() {
-        return descricao;
-    }
+	@Id
+	@GeneratedValue(generator = "increment")
+	@GenericGenerator(name = "increment", strategy = "increment")
 
-    public Comentario setDescricao(String descricao) {
-        this.descricao = descricao;
-        return this;
-    }
+	private int id;
+
+	private String descricao;
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public Comentario setDescricao(String descricao) {
+		this.descricao = descricao;
+		return this;
+	}
 }

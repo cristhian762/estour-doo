@@ -19,8 +19,7 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 @Table(name = "atracao")
    
-
-public class Atracao {
+public class Atracao extends Observable {
     
     @Id
     @GeneratedValue(generator = "increment")    
@@ -32,6 +31,15 @@ public class Atracao {
     private String descricao;
     private String dataFim;
     private String dataInicio;
+
+    public Atracao(String nome, String desc, String dataFim, String dataInicio) {
+        
+        this
+        .comNome(nome)
+        .comDescricao(desc)
+        .comDataFim(dataFim)
+        .comDataInicio(dataInicio);
+    }
 
     public String getNome() {
         return nome;

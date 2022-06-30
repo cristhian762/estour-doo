@@ -1,11 +1,10 @@
 
-
 package hibernate.persistencia;
 
-import hibernate.model.Atracao;
+import hibernate.model.Comercio;
 import java.util.List;
 
-public interface AtracaoDAO extends GenericDAO<Atracao> {
+public interface ComercioDAO extends GenericDAO<Comercio> {
     
-       public List<Atracao> buscaAtracaoNome(String nome);
+       public List<Comercio> buscaComercioCnpj(String cnpj);
 }

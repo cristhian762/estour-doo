@@ -15,35 +15,35 @@ import org.hibernate.annotations.GenericGenerator;
  *
  * @author 20181BSI0229
  */
+
 @Entity
-@Table(name = "comercio")
-public class Comercio {
+@Table(name = "comerciante")
+
+public class Comerciante extends Pessoa implements Observer {
 
 	@Id
 	@GeneratedValue(generator = "increment")
 	@GenericGenerator(name = "increment", strategy = "increment")
 
 	private int id;
-	private String nome;
-	private String descripcao;
 
-	public Comercio setNome(String nome) {
-		this.nome = nome;
+    private String cnpj;
 
-		return this;
-	}
+    public String getCnpj() {
+        return cnpj;
+    }
 
-	public String getNome() {
-		return nome;
-	}
+    public Comerciante comCnpj(String cnpj) {
+        this.cnpj = cnpj;
+        
+        return this;
+    }
 
-	public Comercio setDescripcao(String descripcao) {
-		this.descripcao = descripcao;
-
-		return this;
-	}
-
-	public String getDescripcao() {
-		return descripcao;
-	}
+    @Override
+    public void update(Observable ob) {
+        Atracao event = (Atracao) ob;
+        
+        System.out.println("CNPJ: " + this.getCnpj());
+        System.out.println("Atração: " + event.getNome());
+    }
 }

@@ -2,15 +2,15 @@
 
 package hibernate.persistencia;
 
-import hibernate.model.Atracao;
+import hibernate.model.Avaliacao;
 import java.util.List;
 
-public class AtracaoDAOImpl  extends GenericDAOImpl<Atracao> implements AtracaoDAO {
+public class AvaliacaoDAOImpl  extends GenericDAOImpl<Avaliacao> implements AvaliacaoDAO {
 
-        public List<Atracao> buscaAtracaoNome(String nome){            
+        public List<Avaliacao> buscaAvaliacaoId(int id){            
             sessao = HibernateUtil.getSession();
             transacao = sessao.beginTransaction();                        
-            List<Atracao> lista = sessao.createQuery("from Atracao where name = '" + nome + "'").list();
+            List<Avaliacao> lista = sessao.createQuery("from avaliacao where id = '" + id + "'").list();
             transacao.commit();            
             sessao.close();
             return lista;

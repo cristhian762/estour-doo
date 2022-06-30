@@ -1,16 +1,14 @@
-
-
 package hibernate.persistencia;
 
-import hibernate.model.Atracao;
+import hibernate.model.Comercio;
 import java.util.List;
 
-public class AtracaoDAOImpl  extends GenericDAOImpl<Atracao> implements AtracaoDAO {
+public class ComercioDAOImpl  extends GenericDAOImpl<Comercio> implements ComercioDAO {
 
-        public List<Atracao> buscaAtracaoNome(String nome){            
+        public List<Comercio> buscaComercioCnpj(String cnpj){            
             sessao = HibernateUtil.getSession();
             transacao = sessao.beginTransaction();                        
-            List<Atracao> lista = sessao.createQuery("from Atracao where name = '" + nome + "'").list();
+            List<Comercio> lista = sessao.createQuery("from comercio where cnpj = '" + cnpj + "'").list();
             transacao.commit();            
             sessao.close();
             return lista;

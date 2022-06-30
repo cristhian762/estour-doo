@@ -19,12 +19,14 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 @Table(name = "turista")
 
-public class Turista extends Pessoa implements Ipessoa{
+public class Turista extends Pessoa implements Ipessoa, Observer {
 
     @Id
     @GeneratedValue(generator = "increment")    
     @GenericGenerator(name = "increment", strategy = "increment")
     
+	private int id;
+
     private String cpf;
 
     public String getCpf() {
@@ -35,5 +37,13 @@ public class Turista extends Pessoa implements Ipessoa{
         this.cpf = cpf;
 
         return this;
+    }
+
+    @Override
+    public void update(Observable ob) {
+        Atracao event = (Atracao) ob;
+        
+        System.out.println("CPF: " + this.getCpf());
+        System.out.println("Atração: " + event.getNome());
     }
 }

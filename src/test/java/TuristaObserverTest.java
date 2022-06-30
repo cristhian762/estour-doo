@@ -5,8 +5,9 @@
  */
 
 
-import hibernate.persistencia.AtracaoDAO;
-import hibernate.persistencia.AtracaoDAOImpl;
+import hibernate.model.Atracao;
+import hibernate.model.Comerciante;
+import hibernate.model.Turista;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,9 +18,9 @@ import org.junit.Test;
  *
  * @author 20181bsi0148
  */
-public class AtracaoUnitTest {
+public class TuristaObserverTest {
 
-	public AtracaoUnitTest() {
+	public TuristaObserverTest() {
 	}
 
 	@BeforeClass
@@ -43,16 +44,22 @@ public class AtracaoUnitTest {
 	//
 	@Test
 	public void testeDaMain() throws Exception {
-		AtracaoDAO atracaoDao = new AtracaoDAOImpl();
-		hibernate.model.Atracao atracao = new hibernate.model.Atracao();
+		Turista turista = new Turista();
+		Comerciante comerciante = new Comerciante();
 		
-		atracao.comNome("Festa da Polenta")
-		.comDescricao("Eh uma festa bem legal e que tem bastante polenta hm delicia")
-		.comDataInicio("13/10/2022")
-		.comDataFim("20/10/2022");
+		Atracao atracao = new Atracao(
+			"Festa da polenta",
+			"Uma festa com muita polenta",
+			"20/04/22",
+			"30/04/22"
+		);
 		
-		atracaoDao.inserir(atracao);
+		atracao.addObserver(turista); 
+		atracao.addObserver(comerciante); 
 
-		System.out.println(atracao);
+		turista.comCpf("223.531.990-46");		
+		comerciante.comCnpj("99.562.396/0001-28");
+
+		atracao.notifyObserver();
 	}
 }

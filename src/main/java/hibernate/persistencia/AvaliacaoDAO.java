@@ -2,10 +2,10 @@
 
 package hibernate.persistencia;
 
-import hibernate.model.Atracao;
+import hibernate.model.Avaliacao;
 import java.util.List;
 
-public interface AtracaoDAO extends GenericDAO<Atracao> {
+public interface AvaliacaoDAO extends GenericDAO<Avaliacao> {
     
-       public List<Atracao> buscaAtracaoNome(String nome);
+       public List<Avaliacao> buscaAvaliacaoId(int id);
 }

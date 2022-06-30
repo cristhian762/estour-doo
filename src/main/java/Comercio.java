@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hibernate.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,21 +16,14 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name = "comercio")
+
 public class Comercio {
 
 	@Id
 	@GeneratedValue(generator = "increment")
 	@GenericGenerator(name = "increment", strategy = "increment")
-
-	private int id;
 	private String nome;
 	private String descripcao;
-
-	public Comercio setNome(String nome) {
-		this.nome = nome;
-
-		return this;
-	}
 
 	public String getNome() {
 		return nome;
